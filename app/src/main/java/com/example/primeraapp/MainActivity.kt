@@ -1,24 +1,26 @@
+package com.example.primeraapp
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.myapplication.ui.theme.GreetingCardTheme
+import com.example.primeraapp.ui.theme.PrimeraAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GreetingCardTheme {
+            PrimeraAppTheme {
                 // A surface container that uses the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
+                Surface(color = MaterialTheme.colorScheme.background) {
                     Greeting("Android")
                 }
             }
@@ -36,7 +38,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    GreetingCardTheme {
+    PrimeraAppTheme {
         Greeting("Meghan")
     }
 }
